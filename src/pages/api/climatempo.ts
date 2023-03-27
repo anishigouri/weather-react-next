@@ -26,6 +26,7 @@ export default async function handler(
 
     return res.status(201).json(list)
   } catch (e) {
-    console.error('Estamos com um problema para buscar as informações')
+    console.error(e)
+    return res.status(500).json('Error')
   }
 }
